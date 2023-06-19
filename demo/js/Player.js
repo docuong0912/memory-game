@@ -1,6 +1,6 @@
 function Player(id) {
 	 this.id = id;
-	 this.name = "player "+(id+1);
+	 this.name = "Player "+(id+1);
 	 this.score = 0; 
 	 this.move = 0;
 }
