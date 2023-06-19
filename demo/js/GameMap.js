@@ -42,8 +42,10 @@ function GameMap(){
 				if (turn>=2) {
 					//check if 2 tile are right
 					if(mapSize[active[0].getAttribute("key")].value==mapSize[active[1].getAttribute("key")].value){
+						//increse score for player
 							players[playerTurn].score++;
-				
+							//update max score
+							if(max<players[playerTurn].score) max = players[playerTurn].score;
 							active[0].classList.add("bingo");
 							active[1].classList.add("bingo");
 							
