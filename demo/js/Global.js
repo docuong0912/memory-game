@@ -1,6 +1,6 @@
-var isIcon=false;
-var size =16;
-var playerNum=1;
+var isIcon
+var size ;
+var playerNum;
 var players;
 var sec =0;
 var min =0;
