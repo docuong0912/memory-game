@@ -54,6 +54,7 @@ else{
 	if(playerResult[0].score == playerResult[1].score){
 		result.appendChild(document.createTextNode("It's a tie!"));
 	}
+	else
 	result.appendChild(document.createTextNode(playerResult[0].name+" Wins!"));
 	description.appendChild(document.createTextNode("Game over! Here are the result..."));
 	playerResult.map((player,key)=>{
@@ -61,12 +62,12 @@ else{
 		block.classList.add("playerBoxContainer");
 		const playerName = document.createElement("p");
 		const playerScore = document.createElement("p");
-		if(key==0)
+		if(player.score==max)
 		playerName.appendChild(document.createTextNode(player.name+"(Winner!)"));
 		else
 		playerName.appendChild(document.createTextNode(player.name));
 		playerScore.appendChild(document.createTextNode(player.score+" Pairs"));
-		if(key==0){
+		if(player.score==max){
 			 block.classList.add("winner");
 		}
 		block.appendChild(playerName);
