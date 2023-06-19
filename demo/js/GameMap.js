@@ -19,9 +19,13 @@ function GameMap(){
 		tile.classList.add("sixSquare");
 	}
 	tile.setAttribute("key",key);
-	const content = document.createTextNode(tiles.value);
-	const icon = document.createElement("img");
-	icon.src = tiles.assets[tiles.value-1];
+	let content ;
+	if(isIcon){
+		 content = document.createElement("img");
+		content.src = tiles.assets[tiles.value-1];
+	}
+	else content = document.createTextNode(tiles.value);
+	
 	tile.addEventListener("click",(key)=>{
 
 
@@ -75,9 +79,7 @@ function GameMap(){
 
 
 	})
-	if(isIcon)
-	tile.appendChild(icon);
-	else
+
 	tile.appendChild(content);
 	map.appendChild(tile);
 });
