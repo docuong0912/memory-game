@@ -1,0 +1,21 @@
+.gameMap{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-height: 100vh;
+}
+.map{
+	width: 532px;
+	height: 532px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: row wrap;
+}
+@media screen and (max-width: 375px){
+	.map{
+		width: 320px;
+		height: 320px;
+	}
+ }
