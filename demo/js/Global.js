@@ -8,3 +8,4 @@ var intervals = [];
 var timeouts = [];
 var playerTurn = 0;
 var time;
+var max=0;
